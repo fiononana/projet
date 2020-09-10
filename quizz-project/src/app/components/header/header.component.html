@@ -1,0 +1,52 @@
+<div class="header">
+    <div class="container">
+      
+        <nav class="navbar navbar-inverse" role="navigation">
+            <div class="navbar-header">
+                <button type="button" id="nav-toggle" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="#" class="navbar-brand scroll-top"><em>Talent</em>
+                sourcing</a>
+
+            </div>
+
+            <!--/.navbar-header-->
+            <div class="collapse navbar-collapse justify-content-md-center" id="main-nav">
+                <ul class="navbar-nav">
+                  <!-- *ngIf="!auth.isLoggedIn()" -->
+                  <li class="nav-item" *ngIf="!all.isLoggedIn()"> 
+                  <a routerLink="/" routerLinkActive="active" class="nav-link">Accueil</a>
+                </li>
+                <!-- *ngIf="!auth.isLoggedIn()" -->
+                  <li class="nav-item" *ngIf="!all.isLoggedIn()"> 
+                    <a routerLink="/candidat/new" class="nav-link">Candidats</a></li>
+                 <!-- *ngIf="!auth.isLoggedIn()" -->
+                  <li class="nav-item" *ngIf="!all.isLoggedIn()"> 
+                  <a routerLink="/authentification/new" class="nav-link">Recruteurs</a></li>
+                  <!-- *ngIf="auth.isLoggedIn()" -->
+                  <li class="nav-item" *ngIf="all.isLoggedIn()">
+                    <a routerLink="/liste/new" class="nav-link"> PROFILE</a>
+                  </li>
+                  <li>
+                    <a routerLink="/about/new" class="nav-link" >A propos de nous</a>
+                  </li>
+                  <!-- *ngIf="auth.isLoggedIn()" -->
+                  <li class="nav-item" *ngIf="all.isLoggedIn()">
+                    <a routerLink="" (click)="logout()" class="nav-link">Deconnexion</a>
+                  </li>
+                  
+                    <!-- <li><a href="#" class="scroll-link" data-id="portfolio">Portfolio</a></li> -->
+                    <!-- <li><a href="#" class="scroll-link" data-id="blog">Blog</a></li> -->
+                   <!--  <li><a href="#" class="scroll-link" data-id="contact-us">Contact Us</a></li> -->
+                </ul>
+            </div>
+            <!--/.navbar-collapse-->
+        </nav>
+        <!--/.navbar-->
+    </div>
+    <!--/.container-->
+</div>

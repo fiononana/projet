@@ -1,0 +1,52 @@
+<section id="offre" class="page-section">
+<div class="form">
+<div class="row">
+    <div class="col-md-2"> 
+    <h1>
+        OFFRE D'EMPLOI
+    </h1>
+    <ul class="list-group">
+    <a><li class="list-group-item list-group-item-primary">Biologie/Chimie/Sciences</li></a>
+    <a><li class="list-group-item list-group-item-primary">Commercial/Vente</li></a>
+    <a><li class="list-group-item list-group-item-primary">Confection/Artisan</li></a>
+    <a><li class="list-group-item list-group-item-primary">Conseiller client/Call center</li></a>
+    <a><li class="list-group-item list-group-item-primary">Consultant/Enquêteur</li></a>
+    <a><li class="list-group-item list-group-item-primary">Droit/Juriste</li></a>
+    <a><li class="list-group-item list-group-item-primary">Enseignement</li></a>
+    <a><li class="list-group-item list-group-item-primary">Evénementiel</li></a>
+    <a><li class="list-group-item list-group-item-primary">Gestion/Comptabilité/Finance</li></a>
+    <a><li class="list-group-item list-group-item-primary">Himanitaire/Social</li></a>
+    <a><li class="list-group-item list-group-item-primary">Import/export</li></a>
+    </ul>
+</div>
+    <div class="col-md-10"> 
+            <!-- *ngFor="let element of element" -->
+            <div class="col-sm-4" *ngFor="let element of element">
+                <div class="mat-card text-black" (click)="navigate(element.id_offre)">
+                    <p>{{element.datePub}}</p>
+                    <p>{{element.titre|uppercase}}</p>
+                    <!-- <p>{{element.nom|uppercase}}</p> -->
+                    <!-- <p>{{element.addre|uppercase}}</p> -->
+                    <!-- <div class="d-flex"> -->
+                    <!-- <div class="overflow-auto bg-light p-2 mr-3" style="width: 150px; height: 100px"> -->
+                    <p>{{element.missions|slice : 0  : 110 }}</p>
+                    <!-- </div> -->
+            <!-- <h2>ACTIVITE DE L'ENTREPRISE</h2><br/> -->
+            <!-- <p>{{element.activite}}</p><br/> -->
+            <!-- <h2>MISSION</h2><br/> -->
+            <!-- <p>{{element.missions}}</p><br/> -->
+            <!-- <h2>PROFILE</h2><br/> -->
+            <!-- <p>{{element.profile}}</p><br/> -->
+            <!-- <mat-label>{{element.dateLimiteOffre}}</mat-label><br/> -->
+            <!-- <mat-label>{{element.reference}}</mat-label><br/> -->
+        </div>
+    
+    </div>
+</div>
+</div>
+</div>
+
+</section>
+
+
+

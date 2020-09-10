@@ -1,0 +1,44 @@
+<section id="authentification" class="page-section">
+                   <!--/.container-->
+                   <div class="form">
+                   <div fxLayoutAlign="center">
+                   <mat-card fxFlex="60">
+                   <div class="mat-card">
+                     <div class="titre"> 
+                        <span><mat-toolbar>CONNEXION</mat-toolbar></span>
+                     </div>
+                           <form (submit)="authentification()">
+                            
+                              <mat-form-field class="full-width">
+                                <mat-label for="email">Email</mat-label>
+                                <input matInput type="email" class="form-control"  [(formControl)]="email" required placeholder="ex.nom@example.com"  name="email" [(ngModel)]="credentials.email"/>
+                                <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+                              </mat-form-field>
+                            
+                            
+                                 <mat-form-field class="full-width">
+                                   <mat-label>Entrer votre mot de passe</mat-label>
+                                   <input matInput type="password" class="form-control" required name="password" [(ngModel)]="credentials.password" />
+                                 </mat-form-field>
+
+                                 <input   class="form-control" type="hidden" name="id_role" value="1"  [(ngModel)]="credentials.id_role" />
+
+                              <mat-card-actions>
+                              <button class="btn btn-lg btn-primary btn-block" color="primary" type="submit">Connexion</button>
+                             
+
+                        <a routerLink="/inscription/new"  class="btn btn-link">S'inscrire</a>
+                               </mat-card-actions>
+                            
+                            </form>
+                    
+                     </div>
+                  
+                 
+               </mat-card>
+            </div>
+             </div>  
+            </section>     
+
+                      
+                          

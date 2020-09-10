@@ -1,0 +1,74 @@
+<section id="candidat" class="page-section">
+  <div class="mat-card">
+    <div class="form">
+<div class="row">
+    <div class="col-md-6"> 
+      <br/>       
+        <div class="titre">
+          <span><mat-toolbar >S'INSCRIRE</mat-toolbar></span>
+          </div>
+          <form (submit)="inscription()"> 
+          <mat-form-field  class="full-width">
+            <mat-label>Nom</mat-label>
+            <input matInput type="text" class="form-control"  placeholder="Nom" name="firstName" [(ngModel)]="credentials.firstName"/>
+         </mat-form-field>
+         <mat-form-field class="full-width">
+            <mat-label>Prénom(s)</mat-label>
+            <input matInput type="text" class="form-control"  placeholder="Prénom(s)" name="lasteName" [(ngModel)]="credentials.lastName"/>
+         </mat-form-field>
+         <mat-form-field class="full-width">
+          <mat-label>Nom d'Utilisateur</mat-label>
+          <input matInput type="text"  class="form-control" placeholder="Nom d'Utilisateur" name="username" [(ngModel)]="credentials.username" />
+       </mat-form-field>
+         <mat-form-field class="full-width">
+          <mat-label>Email</mat-label>
+          <input matInput type="email" class="form-control" placeholder="ex.nom@example.com" name="email" required [(ngModel)]="credentials.email" />
+          <mat-error>
+          entrer l'adresse valide
+          </mat-error>
+        </mat-form-field>
+         <mat-form-field class="full-width">
+            <mat-label>Mot de passe</mat-label>
+            <input matInput type="password"  class="form-control"  placeholder="Nouveau Mot de passe" name="password"  [(ngModel)]="credentials.password" />
+        </mat-form-field>
+
+
+          <input   class="form-control" type="hidden" name="id_role" value="2"  [(ngModel)]="credentials.id_role" />
+
+          <button class="btn btn-lg btn-primary btn-block" type="submit">
+              VALIDER
+          </button><br/>
+      </form>
+      </div>
+
+          <div class="col-md-6">
+            <br/>  
+              <div class="titre"> 
+                <span><mat-toolbar>CONNEXION</mat-toolbar></span>
+             </div>
+                   <form (submit)="authentification()">
+                    
+                      <mat-form-field class="full-width">
+                        <mat-label for="email">Email</mat-label>
+                        <input matInput type="email" class="form-control"  [(formControl)]="email" required placeholder="ex.nom@example.com"  name="email" [(ngModel)]="credentials.email"/>
+                        <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+                      </mat-form-field>
+                    
+                    
+                         <mat-form-field class="full-width">
+                           <mat-label>Entrer votre mot de passe</mat-label>
+                           <input matInput type="password" class="form-control" required name="password" [(ngModel)]="credentials.password" />
+                         </mat-form-field>
+
+                         <input   class="form-control" type="hidden" name="id_role" value="2"  [(ngModel)]="credentials.id_role" />
+
+                      <mat-card-actions>
+                      <button class="btn btn-lg btn-primary btn-block" color="primary" type="submit">Connexion</button>
+                       </mat-card-actions>
+                    
+                    </form>
+                </div>
+              </div>
+            </div>
+            </div>
+              </section>

@@ -1,0 +1,56 @@
+            <!-- recruteur -->
+    <div class="cadre" fxLayoutAlign="center">
+        <mat-card fxFlex="60">
+            <div class="mat-card">
+            <div class="titre">
+            <span><mat-toolbar >Publier offre d'emploie</mat-toolbar></span>
+            </div>
+            <form (submit)="recruteur()">
+               <mat-form-field class="full-width">
+                      <mat-label>Nom de l'entreprise</mat-label>
+                      <input matInput type="text"  class="form-control" required placeholder="Nom de l'entreprise" name="nom" [(ngModel)]="entites.nom"/>
+                   </mat-form-field>
+                   <mat-form-field class="full-width">
+                      <mat-label>Adresse de l'entreprise</mat-label>
+                      <input matInput type="text"  class="form-control" required name="addre" [(ngModel)]="entites.addre"/>
+                   </mat-form-field>
+                   <mat-form-field class="full-width">
+                    <mat-label>Titre d'activitée de l'entreprise</mat-label>
+                    <input matInput type="text"  class="form-control" required name="titre" [(ngModel)]="entites.titre"/>
+                 </mat-form-field>
+                   <mat-form-field class="full-width">
+                    <mat-label>Activité de l'entreprise</mat-label>
+                    <textarea matInput type="text"  class="form-control"  required name="activite" [(ngModel)]="entites.activite"></textarea>
+                  </mat-form-field>
+                   <mat-form-field class="full-width">
+                      <mat-label>Missions</mat-label>
+                      <textarea matInput type="text"  class="form-control" required name="missions" [(ngModel)]="entites.missions"></textarea>
+                  </mat-form-field>
+            
+                  <mat-form-field class="full-width" >
+                    <mat-label>Profile</mat-label>
+                     <textarea matInput type="text"  class="form-control" required name="profile" [(ngModel)]="entites.profile"></textarea>
+                   </mat-form-field>
+                   <mat-form-field class="full-width">
+                    <mat-label>Référence</mat-label>
+                    <input matInput type="text"  class="form-control" required name="reference" [(ngModel)]="entites.reference"/>
+                </mat-form-field>
+                <mat-form-field class="full-width">
+                    <mat-label>Date limite de l'offre</mat-label>
+                    <input matInput type="date" [matDatepicker]="picker" required name="dateLimiteOffre" [(ngModel)]="entites.dateLimiteOffre"/>
+                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                </mat-form-field>
+
+                <input   class="form-control" type="hidden" name="id" value="credentials.id"  [(ngModel)]="entites.id" />
+
+                    <button class="btn btn-lg btn-primary btn-block" type="submit">
+                        Publier
+                    </button>
+                    <!-- <a routerLink="/authentification/new" class="btn btn-link">Annuller</a> --> 
+                </form>               
+        </div>
+        </mat-card>
+   
+        </div>
+            

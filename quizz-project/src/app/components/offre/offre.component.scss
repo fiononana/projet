@@ -1,0 +1,45 @@
+#offre{
+  padding: 150px 0px;
+  background-image: url(/assets/img/banner_bg.jpg);
+background-repeat: no-repeat;
+background-size: cover;
+background-attachment: fixed;
+}
+
+
+.form{
+  margin-bottom: 20px;
+  margin-left:10px;
+}
+
+
+  .mat-card{
+      margin-top: 15px;
+      margin-right: 1px;
+      margin-left: 2px;
+      width: 340px;
+      height: 170px;
+      border: 1px solid #555;
+      border-radius: 6px;
+  }
+
+p{
+    text-align: justify;
+  }
+  h1{
+    //   text-align: center;
+      color: green;
+  }
+  h2{
+    //   text-align: center;
+      color: white;
+  }
+  mat-card{
+    margin-top: 100px;
+    width: 1200px;
+    height: 300px;
+    border: 1px solid #555;
+    border-radius: 5px;
+    margin-left: 50px;
+
+  }

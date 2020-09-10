@@ -1,0 +1,24 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 0;
+    z-index: 10000;
+    transition: all 0.2s ease-in-out;
+    height: 80px;
+    background-color: #12812864;
+    text-align: center;
+    line-height: 40px;
+}
+
+
+.myform {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+
+.full-width{
+    width: 100%;
+}

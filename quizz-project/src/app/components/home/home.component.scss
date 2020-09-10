@@ -1,0 +1,109 @@
+mat-card{
+    width: 370px;
+}
+button{
+    width: 300px;
+}
+
+.mat-display-1 p{
+    font-size: 24px;
+    text-align: center;
+}
+
+.text-content{
+    font-size: 30px;
+    margin-top: 3em;
+    text-align: center;
+}
+
+.col-4{
+    height: 50px;
+    color: white;
+
+}
+.col-sm-2 {
+    display: flex;
+    justify-content:space-around;
+}
+
+.baner-content {
+    // width: 129%;
+    padding-top: 14vh;
+     
+}
+.baner-content .text-content p {
+    color: white;
+    text-align: justify;
+    padding: 0px 0%;
+ 
+}
+.card-title-quebec{
+	color: darkcyan;
+}
+
+
+
+.card-title-tana{
+	color:darkcyan;
+}
+.card-title-spontannee{
+    color:darkcyan;
+    font-size: 15px;
+    font-family: Arial, bold;
+
+}
+h6{
+	color: white;
+}
+h5 {
+    font-size: 17px;
+}
+a{
+	text-align: center;
+    color: white;
+    font-size: initial;
+}
+.item {
+    // width: 200px;
+    // height: 200px;
+    margin: 50px auto;
+    padding-top: 75px;
+    // background: #ccc;
+    text-align: center;
+    // color: #FFF;
+    // font-size: 3em;
+  }
+.row {
+    // margin-right: -600px;
+    // margin-left: 139px;
+    // margin-top: 10px;
+    display: flex;
+    justify-content:space-between;
+}
+.card-body {
+	// background-color: #CD853F;
+}
+.card-title-list{
+    font-size: 24px;
+}
+
+.card-body-list p{
+    background-color: transparent;
+    // color: rgb(29, 27, 27) !important;
+    text-align:center !important;
+}
+
+
+.card-title{
+	color: blue;
+}
+.card-title-list{
+    color: white;
+ 
+}
+.comment{
+    color: white;
+    font-size: medium;
+}
+
+/* On mouse-over, add a deeper shadow */

@@ -1,0 +1,29 @@
+<section id="apropos" class="page-section">
+<form (submit)="postuler()" >
+<div class="mat-card">
+  <div class="form">
+    <mat-form-field class="full-width">
+        <mat-label>Objectif</mat-label>
+        <input matInput type="text"  class="form-control" required name="objectif"/>
+     </mat-form-field>
+    <div class="form-group">
+      <label for="formGroupExampleInput2">Curriculum Vitae</label>
+      <input type="file" name="cv" [(ngModel)]="current.cv"  class="form-control"  required (change)="onFileSelected($event)" />
+
+    </div>
+
+    <div class="form-group">
+      <label for="formGroupExampleInput2">Lettre de Motivation</label>
+      <input type="file" name="lm" [(ngModel)]="current.lm"  class="form-control"  required (change)="onFileSelected($event)" />
+    </div>
+<div class="upload">
+      <input   class="form-control" type="hidden" name="id_offre" [(ngModel)]="current.id_offre" />
+    </div>
+      <input   class="form-control" type="hidden" name="id"   [(ngModel)]="current.id" />
+     
+
+    <button class="btn btn-lg btn-primary btn-block" type="submit"> POSTULER </button>
+  </div>
+  </div>
+</form>
+</section>

@@ -1,0 +1,47 @@
+<section id="inscription" class="page-section">
+    <div class="cadre" fxLayoutAlign="center">
+        <mat-card fxFlex="60">
+            <div class="mat-card">
+            <div class="titre">
+            <span><mat-toolbar >S'INSCRIRE</mat-toolbar></span>
+            </div>
+            <form (submit)="inscription()">  
+               <mat-form-field  class="full-width">
+                      <mat-label>Nom</mat-label>
+                      <input matInput type="text" class="form-control"  placeholder="Nom" name="firstName" [(ngModel)]="credentials.firstName"/>
+                   </mat-form-field>
+                   <mat-form-field class="full-width">
+                      <mat-label>Prénom(s)</mat-label>
+                      <input matInput type="text" class="form-control"  placeholder="Prénom(s)" name="lasteName" [(ngModel)]="credentials.lastName"/>
+                   </mat-form-field>
+                   <mat-form-field class="full-width">
+                    <mat-label>Nom d'Utilisateur</mat-label>
+                    <input matInput type="text"  class="form-control" placeholder="Nom d'Utilisateur" name="username" [(ngModel)]="credentials.username" />
+                 </mat-form-field>
+                   <mat-form-field class="full-width">
+                    <mat-label>Email</mat-label>
+                    <input matInput type="email" class="form-control" placeholder="ex.nom@example.com" name="email" required [(ngModel)]="credentials.email" />
+                    <mat-error>
+                    entrer l'adresse valide
+                    </mat-error>
+                  </mat-form-field>
+                   <mat-form-field class="full-width">
+                      <mat-label>Mot de passe</mat-label>
+                      <input matInput type="password"  class="form-control"  placeholder="Nouveau Mot de passe" name="password"  [(ngModel)]="credentials.password" />
+                  </mat-form-field>
+            
+                   <input   class="form-control" type="hidden" name="id_role" value="1"  [(ngModel)]="credentials.id_role" />
+
+                    <button class="btn btn-lg btn-primary btn-block" type="submit">
+                        VALIDER
+                    </button>
+                    <a routerLink="/authentification/new" class="btn btn-link">Annuller</a>
+                
+            </form>
+        
+        
+        </div>
+        </mat-card>
+        </div>
+      </section>
+

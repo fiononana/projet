@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="jumbotron mt-5">
+        <div class="col-sm-8 mx-auto"> 
+            <h1 class="text-center"> PROFILE</h1> 
+        </div>
+        <table class="table col-md-6 mx-auto">
+            <thead>
+                <tr>
+                    <th>id</th>
+                    <th>Nom</th>
+                    <th>Prénom(s)</th>
+                    <th>Nom d'utilisateur</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of items">
+                    <td>{{item?.id}}</td>
+                    <td>{{item?.firstName}}</td>
+                    <td> {{item?.lastName}}</td>
+                    <td> {{item?.username}}</td>
+                    <td> {{item?.email}}</td> 
+                </tr>
+            </tbody>
+    </table>  
+    </div> 
+</div> 
